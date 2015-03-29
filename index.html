@@ -5,27 +5,74 @@
     <meta charset="UTF-8">
     <title>Tetley Tea</title>
     <meta name="viewport" content="width=device-width">
-    <style type="text/css">
-
-        body {
-            font-family: sans-serif;
-            text-align: center;
+    <style>
+        .teaBag-top {
+            border-bottom: 50px solid red;
+        	border-left: 40px solid transparent;
+        	border-right: 40px solid transparent;
+        	height: 0;
+        	width: 100px;
         }
-
-        h1 {
-            font-size: 6em;
+        .teaBag-topFlap {
+            border-top: 40px solid blue;
+        	border-left: 20px solid transparent;
+        	border-right: 20px solid transparent;
+        	height: 0;
+        	width: 60px;
         }
-
-        h4 {
-            font-size: 1em;
+        .teaBag-bottom {
+            width: 180px;
+            height: 170px;
+            background-color: red;
         }
-
     </style>
 </head>
 
 <body>
 
-    <h1>Sup</h1>
-    <h4>-Hunter C</h4>
+    <section>
+
+        <header>
+            <img alt="Tetley Logo">
+            <h1>Tetley Tea<h1>
+        </header>
+
+        <div>
+            <p>Tetley Canada believes that tea can nurture our whole selves. We’re dedicated to providing a variety of blends to support your personal growth in mind, body and spirit.</p>
+        </div>
+
+        <div>
+            <img alt="Tetley British blend advertisement">
+            <img alt="Tetley Signature blend advertisement">
+            <img alt="Tetley Pure Green Tea advertisement">
+        </div>
+
+    </section>
+
+    <nav>
+        <ul>
+            <li>
+                <div class="teaBag">
+                    <div class="teaBag-top">
+                        <div class="teaBag-topFlap">
+                            <div class="teaBag-staple">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="teaBag-bottom">
+                        <a>Our Teas</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a>About Tea</a>
+            </li>
+            <li>
+                <a>About Tetley</a>
+            </li>
+        </ul>
+
+    </nav>
 
 </body>
