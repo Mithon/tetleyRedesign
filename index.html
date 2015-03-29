@@ -23,10 +23,32 @@
 
         body {
             font-family: "museo-sans-rounded";
+            height: 100%;
+            display: -webkit-flex;
+            display: flex;
+        }
+
+        section {
+            flex: 1;
+        }
+
+        nav {
+            flex: 2;
+            height: 100%;
+        }
+
+        ul {
+            height: 100%;
         }
 
         li {
             list-style-type: none;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-justify-content: center;
+            justify-content: center;
         }
 
         li a {
@@ -35,6 +57,10 @@
             font-size: 3rem;
             font-weight: 900;
             text-align: center;
+        }
+
+        .teaBag {
+            width:180px;
         }
 
         .teaBag-top {
@@ -62,6 +88,16 @@
 
         .teaBag-bottom p {
             margin: 0;
+        }
+
+        .ourTea-button {
+            width: 100%;
+            height: 60%;
+            background-image: url("images/Tetley-Tea-menu-photo-2.jpg");
+            background-position: bottom;
+            background-size: 120%;
+            background-repeat: no-repeat;
+
         }
 
 
@@ -101,7 +137,7 @@
 
     <nav>
         <ul>
-            <li>
+            <li class="ourTea-button">
                 <a href="#" class="teaBag">
                     <div class="teaBag-top">
                         <div class="teaBag-topFlap">
