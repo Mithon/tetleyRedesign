@@ -1,0 +1,19 @@
+{
+  "name": "tetleyRedesign",
+  "version": "0.0.1",
+  "description": "Redesign of the tetley website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mithon/tetleyRedesign.git"
+  },
+  "author": "Hunter Caron",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mithon/tetleyRedesign/issues"
+  },
+  "homepage": "https://github.com/Mithon/tetleyRedesign"
+}

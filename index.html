@@ -6,26 +6,76 @@
     <title>Tetley Tea</title>
     <meta name="viewport" content="width=device-width">
     <style>
+
+        /**
+        Colours
+
+        dark pink: #FF8486
+        light pink: #FCAAA7
+
+        dark green: #78A442
+        light green: #8FBE5E
+
+        dank blue: #216796
+        light blue: #2C85B5
+
+        **/
+
+        body {
+            font-family: "museo-sans-rounded";
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 3rem;
+            font-weight: 900;
+            text-align: center;
+        }
+
         .teaBag-top {
-            border-bottom: 50px solid red;
+            border-bottom: 50px solid #FCAAA7;
         	border-left: 40px solid transparent;
         	border-right: 40px solid transparent;
         	height: 0;
         	width: 100px;
         }
+
         .teaBag-topFlap {
-            border-top: 40px solid blue;
+            border-top: 40px solid #FF8486;
         	border-left: 20px solid transparent;
         	border-right: 20px solid transparent;
         	height: 0;
         	width: 60px;
         }
+
         .teaBag-bottom {
+            padding-top: 20px;
             width: 180px;
-            height: 170px;
-            background-color: red;
+            height: 160px;
+            background-color: #FCAAA7;
         }
+
+        .teaBag-bottom p {
+            margin: 0;
+        }
+
+
+
     </style>
+    <script>
+  (function(d) {
+    var config = {
+      kitId: 'hov5lfu',
+      scriptTimeout: 3000
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
 </head>
 
 <body>
@@ -52,7 +102,7 @@
     <nav>
         <ul>
             <li>
-                <div class="teaBag">
+                <a href="#" class="teaBag">
                     <div class="teaBag-top">
                         <div class="teaBag-topFlap">
                             <div class="teaBag-staple">
@@ -61,9 +111,9 @@
 
                     </div>
                     <div class="teaBag-bottom">
-                        <a>Our Teas</a>
+                        <p>Our Teas</p>
                     </div>
-                </div>
+                </a>
             </li>
             <li>
                 <a>About Tea</a>
