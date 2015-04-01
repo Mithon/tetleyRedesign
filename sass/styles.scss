@@ -1,5 +1,24 @@
 //Create some flexbox prefixing mixins
 
+//Start of custom SCSS
+
+// Colours
+
+$darkPink: #FF8486;
+$lightPink: #FCAAA7;
+
+$darkGreen: #78A442;
+$lightGreen: #8FBE5E;
+
+$dankBlue: #216796;
+$lightBlue: #2C85B5;
+
+$lightGray: #F2F2F2;
+
+//
+
+$fontStack: "museo-sans-rounded", "Helvetica", "Arial", sans-serif;
+
 //reset
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -51,21 +70,13 @@ table {
 	border-spacing: 0;
 }
 
-//Start of custom SCSS
+//Animations
 
-// Colours
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
-$darkPink: #FF8486;
-$lightPink: #FCAAA7;
-
-$darkGreen: #78A442;
-$lightGreen: #8FBE5E;
-
-$dankBlue: #216796;
-$lightBlue: #2C85B5;
-
-$fontStack: "museo-sans-rounded", "Helvetica", "Arial", sans-serif;
-
+//Styling Start
 
 body {
     font-family: $fontStack;
@@ -75,18 +86,82 @@ body {
     //background-color: #F2F2F2;
 }
 
+.fade-in {
+	opacity: 0;
+
+	-webkit-animation: fadeIn ease-in 1;
+	-moz-animation: fadeIn ease-in 1;
+	animation: fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+
+	-webkit-animation-duration: 0.4s;
+	-moz-animation-duration: 0.4s;
+	animation-duration: 0.4s;
+
+	-webkit-animation-delay: 0.1s;
+	-moz-animation-delay: 0.1s;
+	animation-delay: 0.1s;
+}
+
+.fade-in.fade2 {
+	-webkit-animation-delay: 0.4s;
+	-moz-animation-delay: 0.4s;
+	animation-delay: 0.4s;
+}
+
+.fade-in.fade3 {
+	-webkit-animation-delay: 0.6s;
+	-moz-animation-delay: 0.6s;
+	animation-delay: 0.6s;
+}
+
 .mainLeftArea {
-    background-color: #F2F2F2;
+    background-color: $lightGray;
     height: 100vh;
     width: 600px;
     display: flex;
     flex-direction: column;
+
     p {
         font-size: 1.5rem;
         padding: 2.4em;
         line-height: 1.4;
         text-align: center;
+		font-weight: 300;
+		padding-bottom: 6em;
     }
+
+}
+
+.news-area {
+
+	width: 98%;
+	margin: auto;
+	overflow: auto;
+
+
+	img {
+		background-size: cover;
+		width: 50%;
+		float: left;
+
+		&:hover {
+			//opacity: 0.7;
+		}
+
+		-webkit-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+	}
+
+	.news-hero {
+		width: 100%;
+		margin: auto;
+	}
 }
 
 nav {
@@ -101,7 +176,7 @@ ul {
     margin: 0 2em;
 }
 
-li {
+.mainButton {
     list-style-type: none;
     display: -webkit-flex;
     display: flex;
@@ -110,14 +185,6 @@ li {
     -webkit-justify-content: center;
     justify-content: center;
 
-    a {
-        text-decoration: none;
-        color: #fff;
-        font-size: 2.7rem;
-        font-weight: 900;
-        line-height: 1.1;
-        text-align: center;
-    }
 }
 
 header {
@@ -126,14 +193,137 @@ header {
     img {
         width: 200px;
         padding-left: 31%;
-        padding-top: 0.5em;
+        margin-top: 0px;
+		margin-bottom: 30px;
     }
 
-    h1 {
+    span {
         display: none;
     }
 }
 
+/** Top Bar Styling **/
+
+.top-bar {
+	display: flex;
+	width: 100%;
+	height: 100px;
+	background-color: $lightGray;
+	justify-content: space-between;
+
+	.logo-container {
+		flex-grow: 0;
+		max-width: 250px;
+		flex: 1;
+
+		img {
+			padding-left: 20px;
+		}
+	}
+	nav {
+		order: 3;
+		flex: none;
+	}
+
+	ul {
+
+
+		margin-top: 20px;
+
+		li {
+			float: right;
+		}
+
+
+	}
+
+	li:first-child	{
+		margin-left: 30px;
+	}
+
+
+	.top-bar-title {
+		background-color: $lightBlue;
+		display: flex;
+		justify-content: space-between;
+		flex-grow: 1;
+		flex: 4;
+		max-width: 400px;
+
+		.title-area {
+			width: 100%;
+		}
+
+		.bottom-triangle {
+			width: 0;
+			height: 0;
+			border-left: 160px solid transparent;
+			border-right: 160px solid transparent;
+			border-top: 50px solid $lightBlue;
+			margin-top: 8px;
+		}
+
+
+		h1 {
+			color: #fff;
+			font-size: 2rem;
+			font-weight: 900;
+			width: 100%;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			padding-top: 35px;
+		}
+
+		img {
+			display: inline;
+			margin: 0;
+			padding: 0;
+			height: 80px;
+			margin: -23px -30px 0 -20px;
+		}
+
+		.side-piece {
+			height: 100px;
+			background-color: $dankBlue;
+			width: 50px;
+		}
+	}
+
+	.smallTeaBag {
+
+
+		.teaBag-top {
+			border-bottom-width: 25px;
+			border-left-width: 20px;
+			border-right-width: 20px;
+			width: 50px;
+		}
+
+		.teaBag-bottom {
+			width: 90px;
+			height: 90px;
+
+			p {
+				font-size: 1.3rem;
+			}
+		}
+
+		.teaBag-topFlap {
+			border-top-width: 20px;
+			border-left-width: 10px;
+			border-right-width: 10px;
+			width: 30px;
+		}
+
+		.teaBag-staple {
+			margin-top: -10px;
+			margin-left: 10px;
+			width: 10px;
+			height: 1px;
+		}
+	}
+}
 
 
 
@@ -142,6 +332,13 @@ header {
 
 .teaBag {
     width:-115px;
+
+	text-decoration: none;
+	color: #fff;
+	font-size: 2.5rem;
+	font-weight: 900;
+	line-height: 1.1;
+	text-align: center;
 
     .teaBag-top {
         border-bottom: 50px solid #fff;
@@ -182,6 +379,7 @@ header {
         border-bottom-right-radius: 4px;
     }
 
+
 }
 
 //TeaBag Mixin
@@ -212,6 +410,19 @@ header {
 
 .blueTeaBag {
     @include createTeaBag($lightBlue, $dankBlue);
+
+	span {
+		display: none;
+	}
+
+	img {
+		width: 100px;
+		text-align: center;
+		display: block;
+		position: relative;
+		margin: 0 auto;
+		white-space:nowrap;
+	}
 }
 
 .pinkTeaBag {
@@ -235,6 +446,23 @@ header {
         margin: 0;
     }
 
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.mainButton:hover {
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.20);
+
+	margin-top: -4px;
+
+	-webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 //Button Images and Sizing
@@ -244,6 +472,10 @@ header {
     background-image: url("../images/Tetley-Tea-menu-photo-1sb.jpg");
     width: 100%;
     margin: 1.5em 0;
+	&:hover {
+		margin-top: 20px;
+		margin-bottom: 28px;
+	}
 }
 
 .aboutTea-button {
@@ -253,6 +485,7 @@ header {
     float:left;
     background-size: 160%;
     background-position: bottom;
+
 }
 
 .aboutTetley-button {
