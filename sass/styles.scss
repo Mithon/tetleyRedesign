@@ -1,0 +1,263 @@
+//Create some flexbox prefixing mixins
+
+//reset
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+//Start of custom SCSS
+
+// Colours
+
+$darkPink: #FF8486;
+$lightPink: #FCAAA7;
+
+$darkGreen: #78A442;
+$lightGreen: #8FBE5E;
+
+$dankBlue: #216796;
+$lightBlue: #2C85B5;
+
+$fontStack: "museo-sans-rounded", "Helvetica", "Arial", sans-serif;
+
+
+body {
+    font-family: $fontStack;
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    //background-color: #F2F2F2;
+}
+
+.mainLeftArea {
+    background-color: #F2F2F2;
+    height: 100vh;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    p {
+        font-size: 1.5rem;
+        padding: 2.4em;
+        line-height: 1.4;
+        text-align: center;
+    }
+}
+
+nav {
+    flex: 3;
+    height: 100%;
+
+}
+
+ul {
+    height: 100%;
+    min-height: 90vh;
+    margin: 0 2em;
+}
+
+li {
+    list-style-type: none;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 2.7rem;
+        font-weight: 900;
+        line-height: 1.1;
+        text-align: center;
+    }
+}
+
+header {
+    background-color: $dankBlue;
+
+    img {
+        width: 200px;
+        padding-left: 31%;
+        padding-top: 0.5em;
+    }
+
+    h1 {
+        display: none;
+    }
+}
+
+
+
+
+
+/** Teabag Styling **/
+
+.teaBag {
+    width:-115px;
+
+    .teaBag-top {
+        border-bottom: 50px solid #fff;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        height: 0;
+        width: 100px;
+    }
+
+    .teaBag-staple {
+
+        margin-top: -20px;
+        margin-left: 21px;
+        border-radius: 5px;
+        width: 18px;
+        height: 2px;
+        background-color: #eeeeee;
+    }
+
+    .teaBag-topFlap {
+        border-top: 40px solid #fff;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        height: 0;
+        width: 60px;
+    }
+
+    .teaBag-bottom {
+        display: flex;
+        width: 180px;
+        height: 180px;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        background-color: #fff;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+}
+
+//TeaBag Mixin
+
+@mixin createTeaBag ($colourLight, $colourDark) {
+
+    @extend .teaBag;
+
+    .teaBag-top {
+        border-bottom-color: $colourLight;
+    }
+
+    .teaBag-topFlap {
+        border-top-color: $colourDark;
+    }
+
+    .teaBag-bottom {
+        background-color: $colourLight;
+    }
+
+}
+
+//Applying Mixins
+
+.greenTeaBag {
+    @include createTeaBag($lightGreen, $darkGreen);
+}
+
+.blueTeaBag {
+    @include createTeaBag($lightBlue, $dankBlue);
+}
+
+.pinkTeaBag {
+    @include createTeaBag($lightPink, $darkPink);
+}
+
+.mainButton {
+    min-height: 46vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    p {
+        margin: 0;
+    }
+
+}
+
+//Button Images and Sizing
+
+.ourTea-button {
+    @extend .mainButton;
+    background-image: url("../images/Tetley-Tea-menu-photo-1sb.jpg");
+    width: 100%;
+    margin: 1.5em 0;
+}
+
+.aboutTea-button {
+    @extend .mainButton;
+    background-image: url("../images/Tetley-Tea-menu-photo-2b.jpg");
+    width: 49%;
+    float:left;
+    background-size: 160%;
+    background-position: bottom;
+}
+
+.aboutTetley-button {
+    @extend .mainButton;
+    background-image: url("../images/Tetley-Tea-menu-photo-3b.jpg");
+    width: 49%;
+    float: right;
+}
