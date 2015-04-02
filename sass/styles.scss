@@ -1,7 +1,3 @@
-//Create some flexbox prefixing mixins
-
-//Start of custom SCSS
-
 // Colours
 
 $darkPink: #FF8486;
@@ -15,9 +11,36 @@ $lightBlue: #2C85B5;
 
 $lightGray: #F2F2F2;
 
-//
+//Font-stack
 
 $fontStack: "museo-sans-rounded", "Helvetica", "Arial", sans-serif;
+
+//TeaBag Mixin
+
+@mixin createTeaBag ($colourLight, $colourDark) {
+
+    @extend .teaBag;
+
+    .teaBag-top {
+        border-bottom-color: $colourLight;
+    }
+
+    .teaBag-topFlap {
+        border-top-color: $colourDark;
+    }
+
+    .teaBag-bottom {
+        background-color: $colourLight;
+    }
+
+}
+
+
+//Animations
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
 //reset
 
@@ -70,12 +93,6 @@ table {
 	border-spacing: 0;
 }
 
-//Animations
-
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
 //Styling Start
 
 body {
@@ -119,7 +136,8 @@ body {
 }
 
 .mainLeftArea {
-    background-color: $lightGray;
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.20);
+	z-index: 1;
     height: 100vh;
     width: 600px;
     display: flex;
@@ -166,8 +184,9 @@ body {
 
 nav {
     flex: 3;
-    height: 100%;
-
+    height: 100vh;
+	background-color: $lightGray;
+	overflow: hidden;
 }
 
 ul {
@@ -205,6 +224,7 @@ header {
 /** Top Bar Styling **/
 
 .top-bar {
+	position: absolute;
 	display: flex;
 	width: 100%;
 	height: 100px;
@@ -218,6 +238,7 @@ header {
 
 		img {
 			padding-left: 20px;
+			width: 180px;
 		}
 	}
 	nav {
@@ -226,15 +247,11 @@ header {
 	}
 
 	ul {
-
-
 		margin-top: 20px;
 
 		li {
 			float: right;
 		}
-
-
 	}
 
 	li:first-child	{
@@ -259,7 +276,7 @@ header {
 			height: 0;
 			border-left: 160px solid transparent;
 			border-right: 160px solid transparent;
-			border-top: 50px solid $lightBlue;
+			border-top: 40px solid $lightBlue;
 			margin-top: 8px;
 		}
 
@@ -382,26 +399,6 @@ header {
 
 }
 
-//TeaBag Mixin
-
-@mixin createTeaBag ($colourLight, $colourDark) {
-
-    @extend .teaBag;
-
-    .teaBag-top {
-        border-bottom-color: $colourLight;
-    }
-
-    .teaBag-topFlap {
-        border-top-color: $colourDark;
-    }
-
-    .teaBag-bottom {
-        background-color: $colourLight;
-    }
-
-}
-
 //Applying Mixins
 
 .greenTeaBag {
@@ -493,4 +490,29 @@ header {
     background-image: url("../images/Tetley-Tea-menu-photo-3b.jpg");
     width: 49%;
     float: right;
+}
+
+//About Tetley page Styles
+
+.aboutTetley {
+	display: flex;
+	justify-content: center;
+
+	main {
+		width: 80%;
+		margin-top: 200px;
+		display: flex;
+
+		.contactArea {
+			flex: 1;
+		}
+
+		.middleDivider {
+			flex: 1;
+		}
+
+		.aboutArea {
+			flex: 2;
+		}
+	}
 }
