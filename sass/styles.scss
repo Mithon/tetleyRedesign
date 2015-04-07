@@ -184,9 +184,12 @@ body {
 
 nav {
     flex: 3;
-    height: 100vh;
 	background-color: $lightGray;
+}
+
+.full-nav {
 	overflow: hidden;
+	height: 100vh;
 }
 
 ul {
@@ -230,6 +233,8 @@ header {
 	height: 100px;
 	background-color: $lightGray;
 	justify-content: space-between;
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.20);
+
 
 	.logo-container {
 		flex-grow: 0;
@@ -278,6 +283,7 @@ header {
 			border-right: 160px solid transparent;
 			border-top: 40px solid $lightBlue;
 			margin-top: 8px;
+
 		}
 
 
@@ -349,7 +355,6 @@ header {
 
 .teaBag {
     width:-115px;
-
 	text-decoration: none;
 	color: #fff;
 	font-size: 2.5rem;
@@ -363,10 +368,10 @@ header {
         border-right: 40px solid transparent;
         height: 0;
         width: 100px;
+		text-shadow: 0 0 20px black;
     }
 
     .teaBag-staple {
-
         margin-top: -20px;
         margin-left: 21px;
         border-radius: 5px;
@@ -384,6 +389,7 @@ header {
     }
 
     .teaBag-bottom {
+		box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.20);
         display: flex;
         width: 180px;
         height: 180px;
@@ -394,6 +400,7 @@ header {
         background-color: #fff;
         border-bottom-left-radius: 4px;
         border-bottom-right-radius: 4px;
+		z-index: 0;
     }
 
 
@@ -499,20 +506,99 @@ header {
 	justify-content: center;
 
 	main {
-		width: 80%;
+		width: 85%;
 		margin-top: 200px;
 		display: flex;
 
+		h2 {
+			display: inline-block;
+			font-size: 1.8rem;
+			font-weight: 700;
+			padding-bottom: 15px;
+		}
+
 		.contactArea {
-			flex: 1;
+			flex: 2;
+			padding: 20px 30px;
+			background-color: $dankBlue;
+			border-radius: 5px;
+			color: white;
+			font-weight: 200;
+			line-height: 1.2;
+
+			a {
+				text-decoration: none;
+				color: #eee;
+				padding-bottom: 20px;
+			}
+
+			h4 {
+				font-size: 1.2rem;
+				font-weight: 700;
+			}
 		}
 
 		.middleDivider {
-			flex: 1;
+			flex: 2;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 0 20px;
+
+			.dividerImage {
+				background-image: url("../images/tetley-main-divider.jpg");
+				background-color: #eee;
+				border-radius: 5px;
+				min-height: 400px;
+				margin-bottom: 20px;
+				background-size: cover;
+			}
+
+			.corperateButton {
+				height: 50px;
+				font-size: 1.4rem;
+				font-weight: 700;
+				background-color: $lightBlue;
+				border-radius: 5px;
+				text-align: center;
+				padding-top: 30px;
+				color: white;
+
+                -webkit-transition: all 0.1s ease;
+                -o-transition: all 0.1s ease;
+                -moz-transition: all 0.1s ease;
+                transition: all 0.1s ease;
+
+                &:hover {
+                    margin-top: -4px;
+                    margin-bottom: 4px;
+                    background-color: $dankBlue;
+                    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.20);
+
+                    -webkit-transition: all 0.1s ease;
+                    -o-transition: all 0.1s ease;
+                    -moz-transition: all 0.1s ease;
+                    transition: all 0.1s ease;
+                }
+
+			}
 		}
 
 		.aboutArea {
-			flex: 2;
+			flex: 3;
+			padding-top: 15px;
+			padding-left: 10px;
+			display: inline-block;
+
+			p {
+				display: inline-block;
+				font-size: 1.1rem;
+				font-weight: 200;
+				padding-bottom: 20px;
+				line-height: 1.4;
+				max-width: 400px;
+				margin: 0;
+			}
 		}
 	}
 }
