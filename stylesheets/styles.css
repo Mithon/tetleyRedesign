@@ -225,7 +225,6 @@ header span {
   margin-left: 30px;
 }
 .top-bar .top-bar-title {
-  background-color: #2c85b5;
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
@@ -240,8 +239,6 @@ header span {
   height: 0;
   border-left: 160px solid transparent;
   border-right: 160px solid transparent;
-  border-top: 40px solid #2c85b5;
-  margin-top: 8px;
 }
 .top-bar .top-bar-title h1 {
   color: #fff;
@@ -262,33 +259,65 @@ header span {
 }
 .top-bar .top-bar-title .side-piece {
   height: 100px;
-  background-color: #216796;
   width: 50px;
 }
-.top-bar .smallTeaBag .teaBag-top {
+.top-bar .smallTeaBag .teaBag-top, .top-bar .smallAboutTetleyBag .teaBag-top {
   border-bottom-width: 25px;
   border-left-width: 20px;
   border-right-width: 20px;
   width: 50px;
 }
-.top-bar .smallTeaBag .teaBag-bottom {
+.top-bar .smallTeaBag .teaBag-bottom, .top-bar .smallAboutTetleyBag .teaBag-bottom {
   width: 90px;
   height: 90px;
 }
-.top-bar .smallTeaBag .teaBag-bottom p {
+.top-bar .smallTeaBag .teaBag-bottom p, .top-bar .smallAboutTetleyBag .teaBag-bottom p {
   font-size: 1.3rem;
 }
-.top-bar .smallTeaBag .teaBag-topFlap {
+.top-bar .smallTeaBag .teaBag-topFlap, .top-bar .smallAboutTetleyBag .teaBag-topFlap {
   border-top-width: 20px;
   border-left-width: 10px;
   border-right-width: 10px;
   width: 30px;
 }
-.top-bar .smallTeaBag .teaBag-staple {
+.top-bar .smallTeaBag .teaBag-staple, .top-bar .smallAboutTetleyBag .teaBag-staple {
   margin-top: -10px;
   margin-left: 10px;
   width: 10px;
   height: 1px;
+}
+
+.pinkBar {
+  background-color: #fcaaa7;
+}
+.pinkBar .bottom-triangle {
+  border-top: 40px solid #fcaaa7;
+  margin-top: 32px;
+}
+.pinkBar .side-piece {
+  background-color: #ff8486;
+}
+
+.blueBar {
+  background-color: #2c85b5;
+}
+.blueBar .bottom-triangle {
+  border-top: 40px solid #2c85b5;
+  margin-top: 8px;
+}
+.blueBar .side-piece {
+  background-color: #216796;
+}
+
+.greenBar {
+  background-color: #8fbe5e;
+}
+.greenBar .bottom-triangle {
+  border-top: 40px solid #8fbe5e;
+  margin-top: 32px;
+}
+.greenBar .side-piece {
+  background-color: #78a442;
 }
 
 /** Teabag Styling **/
@@ -307,7 +336,6 @@ header span {
   border-right: 40px solid transparent;
   height: 0;
   width: 100px;
-  text-shadow: 0 0 20px black;
 }
 .teaBag .teaBag-staple, .greenTeaBag .teaBag-staple, .blueTeaBag .teaBag-staple, .pinkTeaBag .teaBag-staple {
   margin-top: -20px;
@@ -325,7 +353,6 @@ header span {
   width: 60px;
 }
 .teaBag .teaBag-bottom, .greenTeaBag .teaBag-bottom, .blueTeaBag .teaBag-bottom, .pinkTeaBag .teaBag-bottom {
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   width: 180px;
   height: 180px;
@@ -378,6 +405,12 @@ header span {
 }
 .pinkTeaBag .teaBag-bottom {
   background-color: #fcaaa7;
+}
+
+.smallAboutTetleyBag img {
+  padding-left: 0;
+  width: 70px;
+  margin-top: -5px;
 }
 
 .mainButton, .ourTea-button, .aboutTea-button, .aboutTetley-button {
@@ -520,4 +553,45 @@ header span {
   line-height: 1.4;
   max-width: 400px;
   margin: 0;
+}
+
+.ourTeas {
+  width: 100%;
+}
+.ourTeas main {
+  display: flex;
+  height: 87vh;
+  margin-top: 100px;
+}
+.ourTeas main .infoSide {
+  padding: 40px;
+  flex: 2;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.ourTeas main .infoSide img {
+  margin: 10px auto 40px auto;
+}
+.ourTeas main .infoSide h2 {
+  font-size: 1.5rem;
+  padding-bottom: 20px;
+}
+.ourTeas main .infoSide a {
+  text-decoration: none;
+  color: #2c85b5;
+}
+.ourTeas main .infoSide .suggestions {
+  margin-top: 40px;
+}
+.ourTeas main .productGrid {
+  flex: 4 2;
+  background-color: #f2f2f2;
+  display: flex;
+}
+.ourTeas main .productGrid a {
+  width: 150px;
+  height: 150px;
+}
+.ourTeas main .productGrid a img {
+  width: 180px;
 }

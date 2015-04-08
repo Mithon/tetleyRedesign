@@ -241,6 +241,7 @@ header {
 		max-width: 250px;
 		flex: 1;
 
+
 		img {
 			padding-left: 20px;
 			width: 180px;
@@ -265,7 +266,6 @@ header {
 
 
 	.top-bar-title {
-		background-color: $lightBlue;
 		display: flex;
 		justify-content: space-between;
 		flex-grow: 1;
@@ -281,8 +281,6 @@ header {
 			height: 0;
 			border-left: 160px solid transparent;
 			border-right: 160px solid transparent;
-			border-top: 40px solid $lightBlue;
-			margin-top: 8px;
 
 		}
 
@@ -308,7 +306,6 @@ header {
 
 		.side-piece {
 			height: 100px;
-			background-color: $dankBlue;
 			width: 50px;
 		}
 	}
@@ -349,6 +346,47 @@ header {
 }
 
 
+.pinkBar  {
+    background-color: $lightPink;
+
+    .bottom-triangle {
+        border-top: 40px solid $lightPink;
+        margin-top: 32px;
+    }
+
+    .side-piece {
+        background-color: $darkPink;
+    }
+
+}
+
+.blueBar {
+    background-color: $lightBlue;
+
+    .bottom-triangle {
+        border-top: 40px solid $lightBlue;
+        margin-top: 8px;
+    }
+
+    .side-piece {
+        background-color: $dankBlue;
+    }
+}
+
+.greenBar {
+    background-color: $lightGreen;
+
+    .bottom-triangle {
+        border-top: 40px solid $lightGreen;
+        margin-top: 32px;
+    }
+
+    .side-piece {
+        background-color: $darkGreen;
+    }
+}
+
+
 
 
 /** Teabag Styling **/
@@ -368,7 +406,7 @@ header {
         border-right: 40px solid transparent;
         height: 0;
         width: 100px;
-		text-shadow: 0 0 20px black;
+
     }
 
     .teaBag-staple {
@@ -389,7 +427,7 @@ header {
     }
 
     .teaBag-bottom {
-		box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.20);
+
         display: flex;
         width: 180px;
         height: 180px;
@@ -431,6 +469,16 @@ header {
 
 .pinkTeaBag {
     @include createTeaBag($lightPink, $darkPink);
+}
+
+.smallAboutTetleyBag {
+    @extend .smallTeaBag;
+
+    img {
+        padding-left: 0;
+        width: 70px;
+        margin-top: -5px;
+    }
 }
 
 .mainButton {
@@ -601,4 +649,57 @@ header {
 			}
 		}
 	}
+}
+
+.ourTeas {
+    width: 100%;
+
+    main {
+
+        display: flex;
+        height: 87vh;
+        margin-top: 100px;
+
+        .infoSide {
+            padding: 40px;
+            flex: 2;
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.20);
+            z-index: 1;
+
+            img {
+                margin: 10px auto 40px auto;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                padding-bottom: 20px;
+            }
+
+            a {
+                text-decoration: none;
+                color: $lightBlue;
+            }
+
+            .suggestions    {
+                margin-top: 40px;
+            }
+
+        }
+
+        .productGrid {
+            flex: 4 2;
+            background-color: $lightGray;
+            display: flex;
+
+            a {
+                width: 150px;
+                height: 150px;
+
+                img {
+                    width: 180px;
+                }
+            }
+        }
+    }
+
 }
