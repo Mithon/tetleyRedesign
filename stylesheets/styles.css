@@ -621,24 +621,7 @@ header span {
 
 #tea {
   margin: 0 10%;
+  margin-top: -300px;
   width: 1000px;
   height: 1000px;
-}
-
-.teaBag, .greenTeaBag, .blueTeaBag, .pinkTeaBag {
-  box-shadow: 2px 5px 0 rgba(0, 0, 0, 0.5);
-}
-
-.teaText {
-  font-family: 'Lora';
-  font-weight: bold;
-  font-style: italic;
-}
-
-.teaType {
-  font-family: 'Open Sans Condensed';
-}
-
-.clock {
-  font-family: 'Source Code Pro';
 }
