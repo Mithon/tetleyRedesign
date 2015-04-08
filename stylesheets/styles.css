@@ -235,6 +235,7 @@ header span {
   width: 100%;
 }
 .top-bar .top-bar-title .bottom-triangle {
+  text-shadow: 0 0 20px black;
   width: 0;
   height: 0;
   border-left: 160px solid transparent;
@@ -329,6 +330,7 @@ header span {
   font-weight: 900;
   line-height: 1.1;
   text-align: center;
+  z-index: 4;
 }
 .teaBag .teaBag-top, .greenTeaBag .teaBag-top, .blueTeaBag .teaBag-top, .pinkTeaBag .teaBag-top {
   border-bottom: 50px solid #fff;
@@ -363,7 +365,7 @@ header span {
   background-color: #fff;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  z-index: 0;
+  z-index: 2;
 }
 
 .greenTeaBag .teaBag-top {
@@ -566,7 +568,7 @@ header span {
 .ourTeas main .infoSide {
   padding: 40px;
   flex: 2;
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 .ourTeas main .infoSide img {
@@ -574,6 +576,14 @@ header span {
 }
 .ourTeas main .infoSide h2 {
   font-size: 1.5rem;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  font-weight: 900;
+  color: #216796;
+}
+.ourTeas main .infoSide p {
+  line-height: 1.4;
+  font-weight: 200;
   padding-bottom: 20px;
 }
 .ourTeas main .infoSide a {
@@ -585,13 +595,50 @@ header span {
 }
 .ourTeas main .productGrid {
   flex: 4 2;
+}
+.ourTeas main .productGrid .sortingNav {
+  height: 120px;
+  background-color: #fcaaa7;
+  opacity: 0.6;
+  z-index: 0;
+}
+.ourTeas main .gridContainer {
+  overflow: auto;
+  height: 78vh;
   background-color: #f2f2f2;
   display: flex;
+  padding: 30px 10px 50px 30px;
 }
-.ourTeas main .productGrid a {
+.ourTeas main .gridContainer a {
+  flex: 1;
   width: 150px;
   height: 150px;
 }
-.ourTeas main .productGrid a img {
-  width: 180px;
+.ourTeas main .gridContainer a img {
+  height: 130px;
+  padding: 10px;
+}
+
+#tea {
+  margin: 0 10%;
+  width: 1000px;
+  height: 1000px;
+}
+
+.teaBag, .greenTeaBag, .blueTeaBag, .pinkTeaBag {
+  box-shadow: 2px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.teaText {
+  font-family: 'Lora';
+  font-weight: bold;
+  font-style: italic;
+}
+
+.teaType {
+  font-family: 'Open Sans Condensed';
+}
+
+.clock {
+  font-family: 'Source Code Pro';
 }
