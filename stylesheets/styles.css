@@ -603,18 +603,21 @@ header span {
   z-index: 0;
 }
 .ourTeas main .gridContainer {
-  overflow: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
   height: 78vh;
   background-color: #f2f2f2;
   display: flex;
-  padding: 30px 10px 50px 30px;
+  padding: 30px 10px 50px 0px;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
-.ourTeas main .gridContainer a {
-  flex: 1;
+.ourTeas main .gridContainer .productItem {
+  padding: 15px;
   width: 150px;
   height: 150px;
 }
-.ourTeas main .gridContainer a img {
+.ourTeas main .gridContainer .productItem img {
   height: 130px;
   padding: 10px;
 }

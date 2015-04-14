@@ -1,0 +1,12 @@
+[
+    {
+        "teaNum" : 1,
+        "teaType" : "Green",
+        "category" : "Green",
+        "subCategory": null,
+        "name": "High Tea",
+        "isSelected": false,
+        "description": "This tea is the best tea ever omg you should buy it",
+        "recommendations": ""
+    },
+]
