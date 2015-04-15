@@ -27,7 +27,7 @@
         <div class="top-bar-title pinkBar">
             <div class="side-piece"></div>
             <div class="title-area">
-                <h1>OUR TEAS</h1>
+                <h1 class="fade-in">OUR TEAS</h1>
                 <div class="bottom-triangle"></div>
             </div>
             <div class="side-piece"></div>
@@ -69,7 +69,7 @@
 
     <div class="ourTeas" ng-controller="ProductsController as list">
         <main>
-            <section class="infoSide">
+            <section class="infoSide fade-in fade2">
                 <img alt="tea image" src="../images/productImages/{{('000'+ list.selected).substr(-3)}}-tea.png">
                 <h3>{{list.products[list.selected].category}}</h3>
                 <h2>{{list.products[list.selected].name}}</h2>
@@ -93,8 +93,8 @@
                     </ul>
                 </nav>
             -->
-                <div class="gridContainer">
-                    <a class="productItem" id="{{(('000'+ $index).substr(-3))}}" ng-repeat="product in list.products" ng-click="list.selected = $index">
+                <div class="gridContainer fade-in">
+                    <a class="productItem fade-in fade3" id="{{(('000'+ $index).substr(-3))}}" ng-repeat="product in list.products" ng-click="list.selected = $index">
                         <img alt="product image" src="../images/productImages/{{('000'+ $index).substr(-3)}}-tea.png" ng-click="list.selected = $index">
                     </a>
 

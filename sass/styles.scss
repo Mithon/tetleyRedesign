@@ -1,3 +1,14 @@
+/* Welcome to my stylesheet
+
+To people stalking my site,
+even if you don't know sass you should be able to understand what is going on.
+At least once you get past the first section. If you don't know what you are
+doing I recommend asking me about it rather than just copying because you'll
+probably have issues
+*/
+
+// @phil I skimmed the less docs and it seems like you should be able to navigate this decently easily,  */
+
 // Colours
 
 $darkPink: #FF8486;
@@ -96,6 +107,8 @@ table {
 
 //Styling Start
 
+/* The first little bit is all css that spans multiples pages */
+
 body {
     font-family: $fontStack;
     height: 100%;
@@ -103,6 +116,8 @@ body {
     display: flex;
     //background-color: #F2F2F2;
 }
+
+//Fade in elements on page load
 
 .fade-in {
 	opacity: 0;
@@ -124,11 +139,15 @@ body {
 	animation-delay: 0.1s;
 }
 
+//take longer
+
 .fade-in.fade2 {
 	-webkit-animation-delay: 0.4s;
 	-moz-animation-delay: 0.4s;
 	animation-delay: 0.4s;
 }
+
+//even longer
 
 .fade-in.fade3 {
 	-webkit-animation-delay: 0.6s;
@@ -136,97 +155,7 @@ body {
 	animation-delay: 0.6s;
 }
 
-.mainLeftArea {
-	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.20);
-	z-index: 1;
-    height: 100vh;
-    width: 600px;
-    display: flex;
-    flex-direction: column;
 
-    p {
-        font-size: 1.5rem;
-        padding: 2.4em;
-        line-height: 1.4;
-        text-align: center;
-		font-weight: 300;
-		padding-bottom: 6em;
-    }
-
-}
-
-.news-area {
-
-	width: 98%;
-	margin: auto;
-	overflow: auto;
-
-
-	img {
-		background-size: cover;
-		width: 50%;
-		float: left;
-
-		&:hover {
-			//opacity: 0.7;
-		}
-
-		-webkit-transition: all 0.3s ease;
-		-o-transition: all 0.3s ease;
-		-moz-transition: all 0.3s ease;
-		transition: all 0.3s ease;
-	}
-
-	.news-hero {
-		width: 100%;
-		margin: auto;
-	}
-}
-
-nav {
-    flex: 3;
-	background-color: $lightGray;
-}
-
-.full-nav {
-	overflow: hidden;
-	height: 100vh;
-}
-
-ul {
-    height: 100%;
-    margin: 0 2em;
-}
-
-.mainButton {
-    list-style-type: none;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-
-}
-
-header {
-    background-color: $dankBlue;
-
-    img {
-        width: 200px;
-        padding-left: 31%;
-        margin-top: 0px;
-		margin-bottom: 30px;
-    }
-
-    .homeLogo {
-        margin: 15px 0;
-    }
-
-    span {
-        display: none;
-    }
-}
 
 /** Top Bar Styling **/
 
@@ -352,6 +281,8 @@ header {
 }
 
 
+//Easily change colour of top bar
+
 .pinkBar  {
     background-color: $lightPink;
 
@@ -459,6 +390,7 @@ header {
 .blueTeaBag {
     @include createTeaBag($lightBlue, $dankBlue);
 
+    //extra code to accompany the tetley logo
 	span {
 		display: none;
 	}
@@ -484,6 +416,103 @@ header {
         padding-left: 0;
         width: 70px;
         margin-top: -5px;
+    }
+}
+
+
+/*The styles for specific pages start now */
+
+/*Beginning of Styles for Main page */
+
+.mainLeftArea {
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.20);
+	z-index: 1;
+    height: 100vh;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+
+    p {
+        font-size: 1.5rem;
+        padding: 2.4em;
+        line-height: 1.4;
+        text-align: center;
+		font-weight: 300;
+		padding-bottom: 6em;
+    }
+
+}
+
+.news-area {
+
+	width: 98%;
+	margin: auto;
+	overflow: auto;
+
+
+	img {
+		background-size: cover;
+		width: 50%;
+		float: left;
+
+		&:hover {
+			//opacity: 0.7;
+		}
+
+		-webkit-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+	}
+
+	.news-hero {
+		width: 100%;
+		margin: auto;
+	}
+}
+
+nav {
+    flex: 3;
+	background-color: $lightGray;
+}
+
+.full-nav {
+	overflow: hidden;
+	height: 100vh;
+}
+
+ul {
+    height: 100%;
+    margin: 0 2em;
+}
+
+.mainButton {
+    list-style-type: none;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+}
+
+header {
+    background-color: $dankBlue;
+
+    img {
+        width: 200px;
+        padding-left: 31%;
+        margin-top: 0px;
+		margin-bottom: 30px;
+    }
+
+    .homeLogo {
+        margin: 15px 0;
+    }
+
+    span {
+        display: none;
     }
 }
 
@@ -555,7 +584,7 @@ header {
 
 
 
-//About Tetley page Styles
+/* About Tetley page Styles */
 
 .aboutTetley {
 	display: flex;
@@ -660,7 +689,7 @@ header {
 	}
 }
 
-//Our Teas page styling
+/* Our Teas page styling */
 
 .ourTeas {
     width: 100%;
@@ -755,7 +784,7 @@ header {
 }
 
 
-//About Tea Styles
+/* About Tea Page Styles */
 
 .aboutTea {
     width: 100%;
@@ -799,7 +828,7 @@ header {
 
 }
 
-//Brewing Page
+/* Brewing Page Styles */
 
 .svgContainer {
     display: flex;
