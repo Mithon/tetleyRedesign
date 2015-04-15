@@ -68,10 +68,158 @@
     </header>
 
     <div class="aboutTea">
-        <main>
+        <nav class="tabBar">
+            <ul>
+                <li>
+                    <a>Tea History</a>
+                </li>
+                <li>
+                    <h1 class="selectTab">Tea Brewing</h1>
+                </li>
+                <li>
+                    <a>Recipies</a>
+                </li>
+            </ul>
+        </nav>
 
+        <main class="svgContainer">
+            <svg id="tea" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                	 viewBox="53.3 251.1 506.6 270.4" enable-background="new 53.3 251.1 506.6 270.4" xml:space="preserve">
+                <filter id="dropShadow" x="0" y="0" width="140%" height="120%">
+                    <feOffset result="offOut" in="SourceGraphic" dx="0" dy="1" />
+                    <feColorMatrix result="matrixOut" in="offOut" type="matrix"
+                        values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.25 0" />
+                    <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="1.5" />
+                    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+                </filter>
+                <path id="mugTea" fill="rgba(170, 76, 0, 0.68)" enable-background="new    " d="M126.5,394.6c4.3,7.8,45.5,8,62.4,2
+                	c17.6-27.8,22.9-95.4,23.7-113.3c-23.1-4.4-84.9,8.6-107.5-0.8C102.4,296.9,108.2,363.5,126.5,394.6z"/>
+                <g id="greenTea">
+                	<g>
+                		<path class="teaBag" style="filter:url(#dropShadow)" id="gtBag" fill="#ADD79D" d="M427.4,376.8c0,0.8-0.7,1.4-1.4,1.4h-89.4c-0.8,0-1.4-0.6-1.4-1.4V274.5c0-0.8,0.6-1.4,1.4-1.4h89.3
+                			c0.8,0,1.4,0.6,1.4,1.4L427.4,376.8L427.4,376.8z"/>
+                	</g>
+                	<g pointer-events="none">
+                		<rect x="349.2" y="328.9" fill="none" width="64.1" height="24.6"/>
+                		<text class="teaText" transform="matrix(1 0 0 1 369.7937 341.1674)" fill="#288753" font-size="16.2551">tea</text>
+                	</g>
+                	<g pointer-events="none">
+                		<rect x="349.2" y="307.3" fill="none" width="64.1" height="24.6"/>
+                		<text class="teaType" transform="matrix(1 0 0 1 351.7913 325.0652)" fill="#FFFFFF" font-size="23.4074">GREEN</text>
+                	</g>
+                </g>
+                <g id="herbalTea">
+                	<g>
+                		<path class="teaBag" style="filter:url(#dropShadow)" fill="#EDE7DD" d="M427.4,497.3c0,0.8-0.6,1.4-1.4,1.4h-89.3c-0.8,0-1.4-0.6-1.4-1.4V395c0-0.8,0.6-1.4,1.4-1.4H426
+                			c0.8,0,1.4,0.7,1.4,1.4V497.3L427.4,497.3z"/>
+                	</g>
+                	<g pointer-events="none">
+                		<rect x="349.3" y="448.9" fill="none" width="64.1" height="24.6"/>
+                		<text class="teaText" transform="matrix(1 0 0 1 369.8193 461.1699)" fill="#6DA6B6" font-size="16.2551">tea</text>
+                	</g>
+                	<g pointer-events="none">
+                		<rect x="345.3" y="427.8" fill="none" width="72" height="24.6"/>
+                		<text class="teaType" transform="matrix(1 0 0 1 346.96 445.5653)" fill="#FFFFFF" font-size="23.4074">HERBAL</text>
+                	</g>
+                </g>
+                <g id="redTea">
+                	<g>
+                		<path class="teaBag" style="filter:url(#dropShadow)" fill="#C9242A" d="M539.6,377.5c0,0.8-0.7,1.4-1.4,1.4h-89.3c-0.8,0-1.4-0.7-1.4-1.4V275.2c0-0.8,0.7-1.4,1.4-1.4h89.3
+                			c0.8,0,1.4,0.7,1.4,1.4V377.5z"/>
+                	</g>
+                	<g pointer-events="none">
+                		<rect x="461.4" y="329.3" fill="none" width="64.1" height="24.6"/>
+                		<text class="teaText" transform="matrix(1 0 0 1 481.9796 341.5232)" fill="#7C1214" font-size="16.2551">tea</text>
+                	</g>
+                	<g pointer-events="none">
+                		<rect x="461.4" y="307.9" fill="none" width="64.1" height="24.6"/>
+                		<text class="teaType" transform="matrix(1 0 0 1 476.1095 325.715)" fill="#FFFFFF" font-size="23.4074">RED</text>
+                	</g>
+                </g>
+                <g id="blackTea">
+                	<g>
+                		<path class="teaBag" style="filter:url(#dropShadow)" fill="#246DB6" d="M539.6,497.3c0,0.8-0.7,1.4-1.4,1.4h-89.3c-0.8,0-1.4-0.7-1.4-1.4V394.9c0-0.8,0.7-1.4,1.4-1.4h89.3
+                			c0.8,0,1.4,0.6,1.4,1.4V497.3z"/>
+                	</g>
+                	<g pointer-events="none">
+                		<rect x="461.4" y="448.8" fill="none" width="64.1" height="24.6"/>
+                		<text class="teaText" transform="matrix(1 0 0 1 481.9796 461.088)" fill="#3B4AA3" font-size="16.2551">tea</text>
+                	</g>
+                	<g pointer-events="none">
+                		<rect x="461.4" y="427.7" fill="none" width="64.1" height="24.6"/>
+                		<text class="teaType" transform="matrix(1 0 0 1 465.2294 445.4875)" fill="#FFFFFF" font-size="23.4074">BLACK</text>
+                	</g>
+                </g>
+                <g>
+                	<path fill="none" stroke="#EDE7DD" stroke-width="2" stroke-miterlimit="10" d="M136.6,315.1c0,0-48-97.2-44.8,10.7
+                		C95.1,353.9,91,363,91,363"/>
+                	<g>
+                		<polygon fill="#DBD7C5" points="175.9,367.3 126.6,379.6 114.1,329.4 121.1,313.8 149.9,306.6 163.5,317.3 		"/>
+                	</g>
+                	<g opacity="0.6">
+                		<polygon fill="#EDE7DD" points="121,313.8 129.5,322.8 146.5,318.6 149.9,306.7 		"/>
+                	</g>
 
+                		<rect x="134.4" y="314.4" transform="matrix(-0.9704 0.2414 -0.2414 -0.9704 345.0019 587.1222)" fill="#C69C6D" width="4.3" height="0.6"/>
+                	<polygon id="teaTag" fill="#e5e5e5" points="100,358.6 97.8,355.4 86,354.4 83.1,357.3 83.1,357.2 82,370.9 82,370.8 84.4,374.5 84.3,374.7
+                		96,375.7 96,375.4 98.8,372.3 98.8,372.3 	"/>
+                </g>
+                <g>
+                	<path fill="#585858" d="M257.2,482h-3.3c-0.6,0-1.1-0.5-1.1-1.1v-35.7c0-0.6,0.5-1.1,1.1-1.1h3.3c0.6,0,1.1,0.5,1.1,1.1v35.7
+                		C258.3,481.5,257.9,482,257.2,482z"/>
+                	<path fill="#ED4A41" d="M242.2,498.7H83.9c-6.8,0-12.3-5.5-12.3-12.3v-46.5c0-6.8,5.5-12.3,12.3-12.3h158.3
+                		c6.8,0,12.3,5.5,12.3,12.3v46.5C254.5,493.1,249,498.7,242.2,498.7z"/>
+                	<path fill="#E4DDCA" d="M240.9,494.5H85.2c-5.6,0-10.1-4.5-10.1-10.1v-42.7c0-5.6,4.5-10.1,10.1-10.1h155.6
+                		c5.6,0,10.1,4.5,10.1,10.1v42.7C251,490,246.4,494.5,240.9,494.5z"/>
+                	<path fill="#A1A9A0" d="M132.1,486.2H90c-3.4,0-6.2-2.8-6.2-6.2v-33.9c0-3.4,2.8-6.2,6.2-6.2h42.1c3.4,0,6.2,2.8,6.2,6.2V480
+                		C138.3,483.4,135.5,486.2,132.1,486.2z"/>
+                	<path fill="#A1A9A0" d="M193.3,486.2h-42.1c-3.4,0-6.2-2.8-6.2-6.2v-33.9c0-3.4,2.8-6.2,6.2-6.2h42.1c3.4,0,6.2,2.8,6.2,6.2V480
+                		C199.5,483.4,196.7,486.2,193.3,486.2z"/>
+                	<g>
+                		<text id="minutes" class="clock" transform="matrix(1 0 0 1 90.961 473.5139)" fill="#585858" font-size="33.4688">01</text>
+                	</g>
+                	<g>
+                		<text id="seconds" class="clock" transform="matrix(1 0 0 1 152.4787 473.5139)" fill="#585858" font-size="33.4688">28</text>
+                	</g>
+                	<path fill="#585858" d="M229.3,463.2c0.4-2.3-1.1-4.4-3.7-4.5c-0.7,0-1.5,0.2-2.2,0.5l1.4-8.1h-2.4l-2.6,14.7h2.4l0.5-2.6
+                		c0.2-1.1,1.3-2.2,2.5-2.1c1.8,0.1,1.8,1.5,1.7,2.1l-1.3,7.3h2.4L229.3,463.2z"/>
+                	<path fill="#A1A9A0" d="M229.7,472.5c-1.1,0-1.9-1-1.7-2.1s1.3-2.1,2.4-2.1h1.4l0.4-2.4h-1.4c-2.5,0-5,2-5.4,4.5
+                		c-0.5,3.7,2.4,4.5,3.7,4.5h1.4l0.4-2.4C231.1,472.5,230,472.5,229.7,472.5z"/>
+                </g>
+                <g>
+                	<path pointer-events="none" fill="#CCCCCC" d="M220.4,293.8c-3,0-0.7-13.7-2.4-15.7c-0.5-0.6-4.5-1.4-7-2c-0.7,17.9-6,85.4-23.3,113.3
+                		c-16.6,6-57.1,5.8-61.3-2c-18-31.1-20.2-86.4-21.2-112.1c-2.2,0.7-5.9,1.5-7.2,2.3c0,0-7.2,75.3,21.5,124.8
+                		c5,9.3,53.6,9.6,73.4,2.4c5.7-4.1,14.3-29.6,14.3-29.6s1.7-3.4,4.8-2.9s44.2,6.2,49.2-31.4S243.4,295.2,220.4,293.8z M251.2,334.3
+                		c-5.7,37.6-39.1,26.6-38.9,26.4c0.2-0.1,6.5-42.6,6.1-56.8C218.4,303.9,256.4,300.1,251.2,334.3z"/>
+                	<path id="outerMug" fill="#585858" enable-background="new    " d="M220.4,294.2c-3,0-0.7-13.7-2.4-15.7
+                		c-4.8-5.7-104.9-11.5-120-0.5c0,0-7.2,75.3,21.5,124.8c5,9.3,53.6,9.6,73.4,2.4c5.7-4.1,14.3-29.6,14.3-29.6s1.7-3.4,4.8-2.9
+                		s44.2,6.2,49.2-31.4S243.4,295.5,220.4,294.2z M251.2,334.7c-5.7,37.6-39.1,26.6-38.9,26.4c0.2-0.1,6.5-42.6,6.1-56.8
+                		C218.4,304.2,256.4,300.4,251.2,334.7z"/>
+                </g>
+            </svg>
         </main>
+
+        <section class="brewInfo">
+
+            <div>
+                <h2>How to Use</h2>
+                <p>Our simple brewing timer will help ensure you get the best Tea experience possible! Simply click on the type of Tea you are brewing and the timer will start!</p>
+                <p>This is simply a guide! Feel free to tweak your variables to get the perfect cup of Tea for you!</p>
+            </div>
+
+            <div>
+                <h2>Water Temps</h2>
+                <p>Not every type of Tetley Tea likes to be brewed at the same temperature! Follow this guideline to produce the optimal taste!</p>
+                <p>Green Tea:		174°F <br>
+                    Black Tea:		200°F <br>
+                    Red Tea:		208°F <br>
+                    Herbal Tea:	208°F<br>
+                </p>
+            </div>
+        </section>
     </div>
+
+    <script src="../js/snap.svg-min.js"></script>
+    <script src="../js/teaTimer.js"></script>
 
 </body>
