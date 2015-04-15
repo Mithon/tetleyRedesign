@@ -194,7 +194,6 @@ nav {
 
 ul {
     height: 100%;
-    min-height: 90vh;
     margin: 0 2em;
 }
 
@@ -279,6 +278,7 @@ header {
 		.bottom-triangle {
             text-shadow: 0 0 20px black;
 			width: 0;
+            z-index: 3;
 			height: 0;
 			border-left: 160px solid transparent;
 			border-right: 160px solid transparent;
@@ -659,7 +659,9 @@ header {
     main {
 
         display: flex;
-        height: 87vh;
+        height: 1000px;
+        position: fixed;
+        z-index: -5;
         margin-top: 100px;
 
         .infoSide {
@@ -694,12 +696,20 @@ header {
 
             .suggestions    {
                 margin-top: 40px;
+
+                img {
+                    padding-top: 10px;
+                    width: 130px;
+
+                }
             }
 
         }
 
         .productGrid {
             flex: 4 2;
+
+            z-index: 0;
 
             .sortingNav {
                 height: 120px;
@@ -715,7 +725,7 @@ header {
             height: 78vh;
             background-color: $lightGray;
             display: flex;
-            padding: 30px 10px 50px 0px;
+            padding: 30px 10px 100px 0px;
             flex-flow: row wrap;
             justify-content: space-around;
 

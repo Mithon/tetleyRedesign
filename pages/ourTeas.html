@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html ng-app="OurTeas">
 
 <head>
     <meta charset="UTF-8">
@@ -67,20 +67,21 @@
         </nav>
     </header>
 
-    <div class="ourTeas">
+    <div class="ourTeas" ng-controller="ProductsController as list">
         <main>
             <section class="infoSide">
-                <img alt="tea image" src="http://www.tetley.ca/Components/Files/ProductImage/310114163958-main161012010301-mainorangepekoe_72.png">
-                <h3>Tetley Signature</h3>
-                <h2>High Tea</h2>
-                <p> Tetley Canada believes that tea can nurture our whole selves. We’re dedicated to providing a variety of blends to support your personal growth in mind, and spirit.</p>
-                <a href="#">Learn more about Black Tea</a>
+                <img alt="tea image" src="../images/productImages/{{('000'+ list.selected).substr(-3)}}-tea.png">
+                <button ng-click="printSelec()"></button>
+                <h3>{{list.products[list.selected].category}}</h3>
+                <h2>{{list.products[list.selected].name}}</h2>
+                <p> {{list.products[list.selected].description}}</p>
+                <a href="#">Learn more about {{list.products[list.selected].teaType + ' Tea'}}</a>
 
                 <div class="suggestions">
                     <h4>You may also like:</h4>
                     <div class="otherTeas">
-                        <img alt="otherTea1" src="http://www.tetley.ca/Components/Files/ProductImage/030214183511-thumbnail021112180826-thumbnaildiamond_orangepekoe_bold_72_en_carousel.png">
-                        <img alt="otherTea2" src="http://www.tetley.ca/Components/Files/ProductImage/030214183730-thumbnail150513153435-thumbnailtetley_purceylon_60_en_carousel.png">
+                        <img ng-click="list.selected = list.selected+1" alt="otherTea1" src="../images/productImages/{{('000'+ (list.selected + 1)).substr(-3)}}-tea.png">
+                        <img ng-click="list.selected = list.selected+2" alt="otherTea2" src="../images/productImages/{{('000'+ (list.selected + 2)).substr(-3)}}-tea.png">
                     </div>
                 </div>
             </section>
@@ -94,110 +95,18 @@
                 </nav>
             -->
                 <div class="gridContainer">
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114152844-main200213145734-maindiamond_greentea_pure_80_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114152844-main200213145734-maindiamond_greentea_pure_80_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114152844-main200213145734-maindiamond_greentea_pure_80_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114152844-main200213145734-maindiamond_greentea_pure_80_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114152844-main200213145734-maindiamond_greentea_pure_80_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114152844-main200213145734-maindiamond_greentea_pure_80_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114152844-main200213145734-maindiamond_greentea_pure_80_en.png">
+                    <a class="productItem" id="{{(('000'+ $index).substr(-3))}}" ng-repeat="product in list.products" ng-click="list.selected = $index">
+                        <img alt="product image" src="../images/productImages/{{('000'+ $index).substr(-3)}}-tea.png" ng-click="list.selected = $index">
                     </a>
 
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114152844-main200213145734-maindiamond_greentea_pure_80_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114152844-main200213145734-maindiamond_greentea_pure_80_en.png">
-                    </a>
-
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114152844-main200213145734-maindiamond_greentea_pure_80_en.png">
-                    </a>
-
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114152844-main200213145734-maindiamond_greentea_pure_80_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114152844-main200213145734-maindiamond_greentea_pure_80_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114152844-main200213145734-maindiamond_greentea_pure_80_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114152844-main200213145734-maindiamond_greentea_pure_80_en.png">
-                    </a>
-
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114152844-main200213145734-maindiamond_greentea_pure_80_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114152844-main200213145734-maindiamond_greentea_pure_80_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114152844-main200213145734-maindiamond_greentea_pure_80_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114152844-main200213145734-maindiamond_greentea_pure_80_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114152844-main200213145734-maindiamond_greentea_pure_80_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114152844-main200213145734-maindiamond_greentea_pure_80_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114152844-main200213145734-maindiamond_greentea_pure_80_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114180827-main161012005423-mainred_rooibos_40_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114180827-main161012005423-mainred_rooibos_40_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114180827-main161012005423-mainred_rooibos_40_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114180827-main161012005423-mainred_rooibos_40_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114180827-main161012005423-mainred_rooibos_40_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114180827-main161012005423-mainred_rooibos_40_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114180827-main161012005423-mainred_rooibos_40_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114180827-main161012005423-mainred_rooibos_40_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114180827-main161012005423-mainred_rooibos_40_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114180827-main161012005423-mainred_rooibos_40_en.png">
-                    </a>
-                    <a class="productItem">
-                        <img alt="product image" src="http://www.tetley.ca/Components/Files/ProductImage/310114180827-main161012005423-mainred_rooibos_40_en.png">
-                    </a>
 
                 </div>
             </section>
         </main>
     </div>
+
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/angular-resource.min.js"></script>
+    <script src="../js/app.js"></script>
 
 </body>
